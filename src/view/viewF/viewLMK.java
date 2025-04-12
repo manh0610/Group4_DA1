@@ -18,9 +18,12 @@ import view.viewSanPham;
  */
 public class viewLMK extends javax.swing.JFrame {
 
+    private viewSanPham viewSP;
     /** Creates new form viewKieuDangT */
-    public viewLMK() {
+    public viewLMK(viewSanPham viewSP) {
+        this.viewSP = viewSP;
         initComponents();
+        this.setLocationRelativeTo(this);
     }
 
     /** This method is called from within the constructor to
@@ -39,7 +42,7 @@ public class viewLMK extends javax.swing.JFrame {
         txtMoTa = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         jLabel1.setText("Tên loại mắt kính");
 
@@ -99,6 +102,7 @@ public class viewLMK extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
@@ -108,8 +112,7 @@ public class viewLMK extends javax.swing.JFrame {
         }
         LoaiMatKinhService lmks = new LoaiMatKinhService();
         lmks.add(new LoaiMatKinh(null, txtTen.getText(), txtMoTa.getText()));
-        viewSanPham view = new viewSanPham();
-        view.initCBO();
+        viewSP.initCBO();
         this.dispose();
     }//GEN-LAST:event_btnThemActionPerformed
 
@@ -150,7 +153,6 @@ public class viewLMK extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new viewLMK().setVisible(true);
             }
         });
     }

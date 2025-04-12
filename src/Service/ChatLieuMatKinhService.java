@@ -5,7 +5,7 @@
 package Service;
 
 import model.ChatLieuMatKinh;
-import repo.ChatLieuMatKinhRepository;
+import Repositories.ChatLieuMatKinhRepository;
 import java.util.ArrayList;
 
 /**

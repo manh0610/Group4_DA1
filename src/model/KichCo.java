@@ -22,6 +22,10 @@ public class KichCo {
         this.moTaKC = moTaKC;
     }
 
+    public KichCo(String tenKC) {
+        this.tenKC = tenKC;
+    }
+    
     public String getMaKC() {
         return maKC;
     }

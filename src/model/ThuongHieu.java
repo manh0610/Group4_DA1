@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package model;
+package Model;
 
 /**
  *
@@ -22,6 +22,10 @@ public class ThuongHieu {
         this.moTaTH = moTaTH;
     }
 
+    public ThuongHieu(String tenTH) {
+        this.tenTH = tenTH;
+    }
+    
     public String getMaTH() {
         return maTH;
     }

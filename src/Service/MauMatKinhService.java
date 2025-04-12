@@ -5,7 +5,7 @@
 package Service;
 
 import model.MauMatKinh;
-import repo.MauMatKinhRepository;
+import Repositories.MauMatKinhRepository;
 import java.util.ArrayList;
 
 /**

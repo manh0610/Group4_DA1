@@ -3,45 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Netbean%20Code/banKinh/src/repo/MauMatKinhRepository.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/Service/MauMatKinhService.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/model/ThuongHieu.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/repo/KieuDangRepository.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/repo/ChatLieuMatKinhRepository.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/view/view_dangNhap.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/view/viewF/viewMMK.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/Service/SanPhamChiTietService.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/view/viewNhanVien.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/Service/ThuongHieuService.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/view/view_trangChuQuanLy.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/model/SanPham.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/repo/SanPhamRepository.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/Service/SanPhamService.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/repo/MauGongRepository.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/model/MauMatKinh.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/model/LoaiMatKinh.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/Service/MauGongService.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/model/KichCo.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/model/ChatLieuGong.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/model/ChatLieuMatKinh.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/repo/ChatLieuGongRepository.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/repo/LoaiMatKinhRepository.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/Service/LoaiMatKinhService.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/Db/DBConnect.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/Service/ChatLieuGongService.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/Service/KichCoService.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/model/SanPhamChiTietJoin.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/repo/SanPhamChiTietRepository.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/Service/KieuDangService.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/repo/ThuongHieuRepository.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/model/MauGong.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/model/KieuDang.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/Service/ChatLieuMatKinhService.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/repo/KichCoRepository.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/model/SanPhamChiTiet.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/view/viewBanHang.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/view/viewSanPham.java</file>
-            <file>file:/D:/Netbean%20Code/banKinh/src/view/viewF/viewSanPhamF.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/Repositories/rp_NhanVien.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/view/viewHoaDon.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/view/viewPhieuGiamGia.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/view/view_trangChu.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/view/viewSanPham.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/view/viewNhanVien.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/view/view_dangNhap.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/view/viewF/SearchKH.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/Model/NhanVien/NhanVien.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/view/viewBanHang.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/Repositories/KieuDangRepository.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/Repositories/rp_KhachHang.java</file>
+            <file>file:/F:/DA1/DA1_BanKinh/src/Repositories/Repo_HoaDon.java</file>
         </group>
     </open-files>
 </project-private>

@@ -5,7 +5,7 @@
 package Service;
 
 import model.LoaiMatKinh;
-import repo.LoaiMatKinhRepository;
+import Repositories.LoaiMatKinhRepository;
 import java.util.ArrayList;
 
 /**

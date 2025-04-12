@@ -5,7 +5,7 @@
 package Service;
 
 import model.SanPham;
-import repo.SanPhamRepository;
+import Repositories.SanPhamRepository;
 import java.util.ArrayList;
 
 /**

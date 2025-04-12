@@ -4,8 +4,8 @@
  */
 package Service;
 
-import model.ThuongHieu;
-import repo.ThuongHieuRepository;
+import Model.ThuongHieu;
+import Repositories.ThuongHieuRepository;
 import java.util.ArrayList;
 
 /**

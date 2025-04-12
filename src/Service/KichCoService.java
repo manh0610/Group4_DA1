@@ -5,7 +5,7 @@
 package Service;
 
 import model.KichCo;
-import repo.KichCoRepository;
+import Repositories.KichCoRepository;
 import java.util.ArrayList;
 
 /**

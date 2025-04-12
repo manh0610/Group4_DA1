@@ -81,7 +81,7 @@ create table SanPhamChiTiet(
 
 
 create table KhachHang(
-	MaKH nvarchar(10) primary key,
+	MaKH nvarchar(10) primary key DEFAULT LEFT(REPLACE(NEWID(), '-', ''), 10),
 	TenKH nvarchar(20) not null,
 	DiaChi nvarchar(100),
 	SDT varchar(15) not null,
@@ -107,10 +107,9 @@ create table NhanVien(
 	SDT varchar(12),
 	Email varchar(50),
 	CCCD nchar(12),
-	VaiTro bit
+	MaVT int references VaiTro(MaVT)
 );
 
-select  from NhanVien
 -- Bang Hinh thuc giam gia
 create table HinhThucGiamGia(
 	MaHTGG bit primary key,
@@ -206,12 +205,40 @@ values('abc',100,10,10,'2024-09-26','2024-09-26','2024-09-27',1)
 
 select * from SanPham
 
-select * from SanPhamChiTiet
+select * from ChatLieuMatKinh
 
-insert into TrangThai(MaTT,TenTT)
-values(4,N'Hoàn trả')
+select * from HoaDonChiTiet
 
 select * from HoaDon
 
-insert into HoaDon(MaPGG,MaHTTT,MaTT,NgayTao,TenKhachHang,SDT,DiaChi)
-values('3E4A638C5A',1,1,CONVERT(VARCHAR(10), GETDATE(), 120),'Vuong','','Lang Son')
+insert into HoaDonChiTiet(MaHD,MaSPCT,SoLuong)
+values('D509E63261',2,5) 
+
+update HoaDonChiTiet
+set DonGia = (select GiaBan from SanPhamChiTiet where MaSPCT = 2)
+where MaSPCT = 2
+
+update HoaDonChiTiet
+set DonGia = (select GiaBan from SanPhamChiTiet where MaSPCT = 1)
+where MaSPCT = 1
+
+
+
+insert into LichSuHoaDon(MaHD,MaNV,MaCV,NgayThucHien)
+values('16033B3630','NV02',2,CONVERT(nvarchar(10),getdate(),120))
+
+insert into LichSuHoaDon(MaHD,MaNV,MaCV,NgayThucHien)
+values('D0358A122F','NV02',2,CONVERT(nvarchar(10),getdate(),120))
+
+insert into LichSuHoaDon(MaHD,MaNV,MaCV,NgayThucHien)
+values('D509E63261','NV02',2,CONVERT(nvarchar(10),getdate(),120))
+
+
+select ROW_NUMBER() over(order by hd.MaHD) as STT, hd.MaHD,hd.MaKH,hd.MaPGG,httt.TenHTTT,tt.TenTT,hd.NgayTao,Sum(hdct.SoLuong*hdct.DonGia) as GiaBanDau,pgg.GiaGiamToiDa,Sum(hdct.SoLuong*hdct.DonGia) - pgg.GiaGiamToiDa as GiaCuoi,hd.TenKhachHang,hd.SDT,hd.DiaChi 
+                from HoaDon hd join HinhThucThanhToan httt on hd.MaHTTT = httt.MaHTTT
+                join TrangThai tt on hd.MaTT = tt.MaTT 
+                join PhieuGiamGia pgg on hd.MaPGG = pgg.MaPGG
+                join HoaDonChiTiet hdct on hd.MaHD = hdct.MaHD
+                Group by hd.MaHD,hd.MaKH,httt.TenHTTT,tt.TenTT,hd.NgayTao,hd.GiaBanDau,hd.GiaGiam,hd.TenKhachHang,hd.DiaChi,hd.SDT,hd.MaPGG,hd.GiaCuoiCung,pgg.GiaGiamToiDa
+                order by Sum(hdct.SoLuong*hdct.DonGia) - pgg.GiaGiamToiDa asc
+

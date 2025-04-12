@@ -5,7 +5,7 @@
 package Service;
 
 import model.MauGong;
-import repo.MauGongRepository;
+import Repositories.MauGongRepository;
 import java.util.ArrayList;
 
 /**

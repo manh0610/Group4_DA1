@@ -18,9 +18,12 @@ import view.viewSanPham;
  */
 public class viewSanPhamF extends javax.swing.JFrame {
 
+    private viewSanPham viewSP;
     /** Creates new form viewKieuDangT */
-    public viewSanPhamF() {
+    public viewSanPhamF(viewSanPham viewSP) {
+        this.viewSP = viewSP;
         initComponents();
+        setLocationRelativeTo(this);
     }
 
     /** This method is called from within the constructor to
@@ -37,7 +40,7 @@ public class viewSanPhamF extends javax.swing.JFrame {
         btnThem = new javax.swing.JButton();
         btnQuayLai = new javax.swing.JButton();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
 
         jLabel1.setText("Tên Sản phẩm");
 
@@ -87,6 +90,7 @@ public class viewSanPhamF extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnThemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemActionPerformed
@@ -96,8 +100,7 @@ public class viewSanPhamF extends javax.swing.JFrame {
         }
         SanPhamService sps = new SanPhamService();
         sps.add(new SanPham(null, txtTen.getText()));
-        viewSanPham view = new viewSanPham();
-        view.initCBO();
+        viewSP.initCBO();
         this.dispose();
     }//GEN-LAST:event_btnThemActionPerformed
 
@@ -138,7 +141,7 @@ public class viewSanPhamF extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new viewSanPhamF().setVisible(true);
+                
             }
         });
     }

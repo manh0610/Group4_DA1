@@ -5,9 +5,9 @@
 package Service;
 
 import model.SanPhamChiTiet;
-import repo.SanPhamChiTietRepository;
+import Repositories.SanPhamChiTietRepository;
 import java.util.ArrayList;
-import model.SanPhamChiTietJoin;
+import Model.SanPhamChiTietJoin;
 
 /**
  *
@@ -73,7 +73,7 @@ public class SanPhamChiTietService {
         return spctr.searchTheoTenSP(ten);
     }
     
-    public ArrayList<SanPhamChiTietJoin> searchTheoMaSPCTJ(Integer maSPCT){
+    public ArrayList<SanPhamChiTietJoin> searchTheoMaSPCTJ(String maSPCT){
         return spctr.searchByMaSPCT(maSPCT);
     }
 }

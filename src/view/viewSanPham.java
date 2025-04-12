@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JInternalFrame.java to edit this template
  */
 package view;
+import Model.SanPhamChiTietJoin;
 import view.viewF.viewKieuDang;
 import model.ChatLieuGong;
 import model.ChatLieuMatKinh;
@@ -13,7 +14,7 @@ import model.MauGong;
 import model.MauMatKinh;
 import model.SanPham;
 import model.SanPhamChiTiet;
-import model.ThuongHieu;
+import Model.ThuongHieu;
 import Service.ChatLieuGongService;
 import Service.ChatLieuMatKinhService;
 import Service.KichCoService;
@@ -34,7 +35,7 @@ import java.util.Calendar;
 import java.util.Date;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
-import model.SanPhamChiTietJoin;
+import Model.SanPhamChiTietJoin;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -95,6 +96,26 @@ public class viewSanPham extends javax.swing.JInternalFrame {
         this.fillTableKD(kds.getAll());
     }
     
+    public void qlsp(){
+        btnThemSP.setEnabled(false);
+        btnSuaSP.setEnabled(false);
+        btnThemSPCT.setEnabled(false);
+        btnSuaSPCT.setEnabled(false);
+        btnXoaSP.setEnabled(false);
+        btnXoaSPCT.setEnabled(false);
+        btnThemTT.setEnabled(false);
+        btnSuaTT.setEnabled(false);
+        btnXoaTT.setEnabled(false);
+        btnThemSPF.setEnabled(false);
+        btnThemCLG.setEnabled(false);
+        btnThemCLMK.setEnabled(false);
+        btnThemKC.setEnabled(false);
+        btnThemKD.setEnabled(false);
+        btnThemLMK.setEnabled(false);
+        btnThemMG.setEnabled(false);
+        btnThemMMK.setEnabled(false);
+        btnThemTH.setEnabled(false);
+    }
     int indexTT = -1;
 
     public void fillTableSPCT(ArrayList<SanPhamChiTietJoin> list) {
@@ -526,6 +547,8 @@ public class viewSanPham extends javax.swing.JInternalFrame {
         btnLamMoiTT = new javax.swing.JButton();
         jScrollPane5 = new javax.swing.JScrollPane();
         tblTT = new javax.swing.JTable();
+
+        setPreferredSize(new java.awt.Dimension(1350, 840));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel1.setText("Mã sản phẩm: ");
@@ -1871,8 +1894,9 @@ public class viewSanPham extends javax.swing.JInternalFrame {
                 // Quét mã QR
                 Result rs = new MultiFormatReader().decode(binaryBitmap);
                 JOptionPane.showMessageDialog(this, "Quét thành công");
-                this.fillTableSPCT(spcts.searchTheoMaSPCTJ(Integer.parseInt(rs.getText())));
+                this.fillTableSPCT(spcts.searchTheoMaSPCTJ(rs.getText()));
                 System.out.println(rs);
+                this.setTextSPCT(0);
 
                 break;  // Thoát sau khi quét thành công
 
@@ -2001,47 +2025,47 @@ public class viewSanPham extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_btnXuatExcelActionPerformed
 
     private void btnThemKDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemKDActionPerformed
-        viewKieuDang viewKD = new viewKieuDang();
+        viewKieuDang viewKD = new viewKieuDang(this);
         viewKD.setVisible(true);
     }//GEN-LAST:event_btnThemKDActionPerformed
 
     private void btnThemLMKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemLMKActionPerformed
-        viewLMK viewLMK = new viewLMK();
+        viewLMK viewLMK = new viewLMK(this);
         viewLMK.setVisible(true);
     }//GEN-LAST:event_btnThemLMKActionPerformed
 
     private void btnThemMMKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemMMKActionPerformed
-        viewMMK viewMMK = new viewMMK();
+        viewMMK viewMMK = new viewMMK(this);
         viewMMK.setVisible(true);
     }//GEN-LAST:event_btnThemMMKActionPerformed
 
     private void btnThemCLMKActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemCLMKActionPerformed
-        viewCLMK viewCLMK = new viewCLMK();
+        viewCLMK viewCLMK = new viewCLMK(this);
         viewCLMK.setVisible(true);
     }//GEN-LAST:event_btnThemCLMKActionPerformed
 
     private void btnThemCLGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemCLGActionPerformed
-        viewCLG viewCLG = new viewCLG();
+        viewCLG viewCLG = new viewCLG(this);
         viewCLG.setVisible(true);
     }//GEN-LAST:event_btnThemCLGActionPerformed
 
     private void btnThemMGActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemMGActionPerformed
-        viewMG viewMG = new viewMG();
+        viewMG viewMG = new viewMG(this);
         viewMG.setVisible(true);
     }//GEN-LAST:event_btnThemMGActionPerformed
 
     private void btnThemKCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemKCActionPerformed
-        viewKC viewKC = new viewKC();
+        viewKC viewKC = new viewKC(this);
         viewKC.setVisible(true);
     }//GEN-LAST:event_btnThemKCActionPerformed
 
     private void btnThemTHActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemTHActionPerformed
-        viewTH viewTH = new viewTH();
+        viewTH viewTH = new viewTH(this);
         viewTH.setVisible(true);
     }//GEN-LAST:event_btnThemTHActionPerformed
 
     private void btnThemSPFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnThemSPFActionPerformed
-        viewSanPhamF viewSP = new viewSanPhamF();
+        viewSanPhamF viewSP = new viewSanPhamF(this);
         viewSP.setVisible(true);
     }//GEN-LAST:event_btnThemSPFActionPerformed
 

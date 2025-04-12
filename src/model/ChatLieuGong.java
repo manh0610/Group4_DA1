@@ -22,6 +22,10 @@ public class ChatLieuGong {
         this.moTaCLG = moTaCLG;
     }
 
+    public ChatLieuGong(String tenCLG) {
+        this.tenCLG = tenCLG;
+    }
+
     public String getMaCLG() {
         return maCLG;
     }
